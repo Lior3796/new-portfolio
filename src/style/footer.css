@@ -1,0 +1,6 @@
+.footer-section{
+    @apply bg-gray-900 text-white py-4;
+    & p{
+        @apply container mx-auto text-center;
+    }
+}

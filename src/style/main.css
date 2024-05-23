@@ -1,0 +1,13 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import "./btn.css";
+@import "./header.css";
+@import "./hero.css";
+@import "./projectCard.css";
+@import "./about.css";
+@import "./footer.css";
+@import "./projectSection.css";
+
+
+

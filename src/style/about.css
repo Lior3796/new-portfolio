@@ -1,0 +1,10 @@
+/* Custom CSS for the About section */
+.about-section {
+    background: linear-gradient(to bottom right, #f8fafc, #e2e8f0);
+    clip-path: polygon(0 0, 120% 10%, 100% 90%, 0% 100%);
+  }
+  
+  .container {
+    position: relative;
+    z-index: 1;
+  }

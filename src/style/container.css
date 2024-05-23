@@ -1,0 +1,9 @@
+:root{
+    --theme-color:#5321d0;
+}
+
+.container{
+ .container-header{
+    background-color: var(--theme-color);
+ }   
+}

@@ -1,0 +1,11 @@
+.header-section{
+    @apply bg-gray-900 text-white p-4 shadow-md;
+    @apply mx-auto flex justify-between items-center;
+}
+
+.header-title{
+    @apply text-3xl font-bold;
+}
+.header-list {
+   @apply flex space-x-4; 
+}
