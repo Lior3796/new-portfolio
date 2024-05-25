@@ -1,4 +1,5 @@
 import React from "react";
+import Progress from "./components/Progress";
 import "./style/main.css";
 import HeroSection from "./components/HeroSection";
 import Header from "./components/Header";
@@ -13,6 +14,7 @@ const App = () => {
       <Header />
       <HeroSection />
       <AboutSection />
+      <Progress />
       <ProjectsSection />
       <ContactSection />
       <Footer />
