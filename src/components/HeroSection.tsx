@@ -1,54 +1,37 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const typingAnimation = {
-  hidden: { opacity: 1 },
-  visible: {
-    opacity: 1,
-    transition: {
-      delay: 0.6,
-      staggerChildren: 0.05,
-    },
-  },
-};
-
-const characterAnimation = {
-  hidden: { opacity: 0, y: -100 },
-  visible: { opacity: 1, y: 0 },
-};
-
 const HeroSection = () => {
-  const title = "Welcome to My Portfolio";
-  const description = "I am a passionate developer creating awesome web applications.";
-
   return (
-    <section id="home" className="hero-section">
+    <section id="hero" className="hero-section relative">
+      <div className="relative z-10 flex flex-col items-center justify-center h-screen text-center">
         <motion.h1
-          initial="hidden"
-          animate="visible"
-          variants={typingAnimation}
+          className="text-5xl font-bold mb-4 text-white"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
         >
-          {title.split("").map((char, index) => (
-            <motion.span key={index} variants={characterAnimation}>
-              {char}
-            </motion.span>
-          ))}
+          Welcome to My Portfolio
         </motion.h1>
         <motion.p
-          initial={{ opacity: 0, y: 50 }}
+          className="text-xl text-white mb-8"
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.5 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
         >
-          {description}
+          I am a passionate developer creating awesome web applications.
         </motion.p>
         <motion.a
           href="#projects"
-          className=""
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.95 }}
+          className="px-6 py-3 bg-blue-500 text-white font-semibold rounded hover:bg-blue-600"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
         >
           View My Projects
         </motion.a>
+      </div>
+      <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-gray-100 to-transparent"></div>
     </section>
   );
 };
