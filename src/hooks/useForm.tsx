@@ -43,7 +43,7 @@ const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
   const TEMPLATE_ID = process.env.TEMPLATE_ID ?? "DEFAULT_TEMPLATE_ID";
   const USER_ID = process.env.REACT_APP_USER_ID ?? "DEFAULT_USER_ID";
 
-  
+  console.log(SERVICE_ID,TEMPLATE_ID,USER_ID);
   emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.currentTarget,USER_ID)
       .then((result) => {
           console.log(result.text);
