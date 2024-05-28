@@ -1,9 +1,8 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 
 const AboutSection = () => {
   return (
-    <section id="about" className="about-section py-20 bg-gray-100 text-gray-800">
+    <section id="about" className="about-section py-20 text-gray-800">
       <div className="container mx-auto flex flex-col items-center justify-center text-center">
         <motion.h2
           className="text-4xl font-bold mb-4"
@@ -19,9 +18,9 @@ const AboutSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          Hi! I'm a passionate developer with a knack for creating engaging web applications.
-          With a strong foundation in front-end technologies and a keen eye for design, I strive
-          to build user-friendly and visually appealing projects. Let's make something great together!
+         Full-stack developer with QA experience. Skilled in developing desktop applications with WPF C# and .NET,
+building robust servers with Node.js, Express, and MongoDB, and enhancing browser functionality through
+Chrome extensions. Proficient in developing web applications using React.
         </motion.p>
         <motion.div
           initial={{ opacity: 0 }}

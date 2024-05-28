@@ -8,7 +8,7 @@ export default {
     extend: {
       colors:{
         'right-gradient':"#f8fafc",
-        'left-gradient':"#e2e8f0"
+        'left-gradient':"#e2e8f0",
       }
     },
   },

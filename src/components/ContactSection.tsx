@@ -3,6 +3,8 @@ import useForm from "../hooks/useForm";
 const ContactSection = () => {
   const [name, email, message, handleInput,handleSubmit] = useForm();
 
+
+
   return (
     <section id="contact" className="py-12 bg-gray-100">
       <div className="container mx-auto">

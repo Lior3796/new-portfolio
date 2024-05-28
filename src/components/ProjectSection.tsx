@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import ProjectCard from "./ProjectCard";
-import Olympics from "../../public/Olympics.png";
-import Companies from "../../public/Companies.png";
-import LightOut from "../../public/lights-out game.png";
+import Olympics from "../assets/Olympics.png";
+import Companies from "../assets/Companies.png";
+import LightOut from "../assets/lights-out game.png";
 
 const projects = [
   {

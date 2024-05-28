@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 
 const HeroSection = () => {
@@ -19,7 +18,7 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          I am a passionate developer creating awesome web applications.
+         My name is Lior Solomon and I'm a Fullstack developer
         </motion.p>
         <motion.a
           href="#projects"

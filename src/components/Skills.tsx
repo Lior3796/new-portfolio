@@ -1,6 +1,13 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import reactLogo from '../assets/react.svg';
+import html from '../assets/html.png';
+import css from '../assets/css.png';
+import nodeJs from '../assets/Nodejs.png';
+import js from '../assets/js.png';
+import express from '../assets/express-js.png';
+import typescript from '../assets/typescript.png';
+import mongodb from '../assets/mongo.png';
+
 
 interface Skill {
   name: string;
@@ -9,19 +16,19 @@ interface Skill {
 }
 
 const skills: Skill[] = [
-  { name: 'HTML', level: 95, logo: reactLogo },
-  { name: 'CSS', level: 85, logo: reactLogo },
-  { name: 'JS', level: 90, logo: reactLogo },
+  { name: 'HTML', level: 80, logo: html },
+  { name: 'CSS', level: 75, logo: css },
+  { name: 'JS', level: 90, logo: js },
   { name: 'React', level: 90, logo: reactLogo },
-  { name: 'WPF', level: 70, logo: reactLogo },
-  { name: 'NodeJs', level: 80, logo: reactLogo },
-  { name: 'MongoDB', level: 75, logo: reactLogo },
-  { name: 'Express', level: 75, logo: reactLogo },
+  { name: 'Typescript', level: 80, logo: typescript },
+  { name: 'NodeJs', level: 80, logo: nodeJs },
+  { name: 'Express', level: 85, logo: express },
+  { name: 'MongoDB', level: 85, logo: mongodb },
 ];
 
-const SkillsComponent = () => {
+const Skills = () => {
   return (
-    <section className="skills-section shape py-20 bg-gray-100 text-gray-800">
+    <section className="skills-section shape">
       <div className="container mx-auto px-6">
         <h2 className="text-4xl font-bold text-center mb-10">My Skills</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -45,7 +52,7 @@ const SkillsComponent = () => {
                     cy="50%"
                   />
                   <motion.circle
-                    className="text-blue-500"
+                    className="text-white-500"
                     strokeWidth="4"
                     strokeLinecap="round"
                     stroke="currentColor"
@@ -68,7 +75,6 @@ const SkillsComponent = () => {
                 />
               </div>
               <h3 className="text-xl font-semibold mt-4">{skill.name}</h3>
-              <span className="text-sm font-semibold">{skill.level}%</span>
             </motion.div>
           ))}
         </div>
@@ -77,4 +83,4 @@ const SkillsComponent = () => {
   );
 };
 
-export default SkillsComponent;
+export default Skills;
