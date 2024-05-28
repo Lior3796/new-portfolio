@@ -39,8 +39,12 @@ const useForm = (): UseFormType => {
 const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // Handle form submission
+  const SERVICE_ID = process.env.REACT_APP_SERVICE_ID ?? "DEFAULT";
+  const TEMPLATE_ID = process.env.TEMPLATE_ID ?? "DEFAULT_TEMPLATE_ID";
+  const USER_ID = process.env.REACT_APP_USER_ID ?? "DEFAULT_USER_ID";
 
-    emailjs.sendForm('service_1r2gfpb', 'template_52y2ijh', e.currentTarget,"786EpJXcoKptmTNTX")
+  
+  emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.currentTarget,USER_ID)
       .then((result) => {
           console.log(result.text);
       }, (error) => {
