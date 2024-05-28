@@ -1,4 +1,5 @@
 import { useState } from "react";
+import emailjs from 'emailjs-com';
 type UseFormType = [
     string,
     string,
@@ -26,6 +27,9 @@ const useForm = (): UseFormType => {
         setEmail(e.currentTarget.value);
         break;
       case "message":
+        console.log(
+          "Inside the message block"
+        )
         setMessage(e.currentTarget.value);
         break;
     }
@@ -36,12 +40,12 @@ const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // Handle form submission
 
-    // emailjs.sendForm('service_1r2gfpb', 'template_lv6oc6v', "Hello world", 'YOUR_USER_ID')
-    //   .then((result) => {
-    //       console.log(result.text);
-    //   }, (error) => {
-    //       console.log(error.text);
-    //   });
+    emailjs.sendForm('service_1r2gfpb', 'template_52y2ijh', e.currentTarget,"786EpJXcoKptmTNTX")
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
   };
   return [name, email, message, handleInput,handleSubmit];
 };
